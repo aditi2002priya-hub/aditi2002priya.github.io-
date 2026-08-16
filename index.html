@@ -16,7 +16,7 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #0b1120;
+            background: #060e1d;
             color: #e5e7eb;
             line-height: 1.6;
         }
@@ -27,8 +27,8 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(11, 17, 32, 0.97);
-            border-bottom: 1px solid #1e293b;
+            background: rgba(6, 14, 29, 0.97);
+            border-bottom: 1px solid #1e3a66;
         }
 
         nav {
@@ -47,7 +47,7 @@
         }
 
         .logo span {
-            color: #38bdf8;
+            color: #ff9900;
         }
 
         nav ul {
@@ -64,7 +64,7 @@
         }
 
         nav ul li a:hover {
-            color: #38bdf8;
+            color: #ff9900;
         }
 
         /* GENERAL */
@@ -87,7 +87,7 @@
             display: block;
             width: 55px;
             height: 3px;
-            background: #38bdf8;
+            background: #ff9900;
             margin: 12px auto 0;
         }
 
@@ -104,7 +104,7 @@
         }
 
         .intro {
-            color: #38bdf8;
+            color: #ff9900;
             font-size: 18px;
             margin-bottom: 8px;
         }
@@ -142,25 +142,25 @@
             border-radius: 7px;
             text-decoration: none;
             font-weight: bold;
-            background: #38bdf8;
-            color: #07111f;
+            background: #ff9900;
+            color: #060e1d;
             transition: 0.3s;
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            background: #7dd3fc;
+            background: #ffb84d;
         }
 
         .btn.secondary {
             background: transparent;
-            color: #38bdf8;
-            border: 1px solid #38bdf8;
+            color: #ff9900;
+            border: 1px solid #ff9900;
         }
 
         .btn.secondary:hover {
-            background: #38bdf8;
-            color: #07111f;
+            background: #ff9900;
+            color: #060e1d;
         }
 
         /* ABOUT */
@@ -186,8 +186,8 @@
         }
 
         .skill-card {
-            background: #111827;
-            border: 1px solid #1e293b;
+            background: #0a1730;
+            border: 1px solid #1e3a66;
             border-radius: 10px;
             padding: 20px;
             text-align: center;
@@ -198,14 +198,14 @@
 
         .skill-card:hover {
             transform: translateY(-5px);
-            border-color: #38bdf8;
+            border-color: #ff9900;
         }
 
         /* PROJECT */
 
         .project-card {
-            background: #111827;
-            border: 1px solid #1e293b;
+            background: #0a1730;
+            border: 1px solid #1e3a66;
             border-radius: 12px;
             padding: 32px;
             transition: 0.3s;
@@ -213,7 +213,7 @@
 
         .project-card:hover {
             transform: translateY(-5px);
-            border-color: #38bdf8;
+            border-color: #ff9900;
         }
 
         .project-card h3 {
@@ -228,7 +228,7 @@
         }
 
         .tech {
-            color: #38bdf8 !important;
+            color: #ff9900 !important;
             font-size: 14px;
         }
 
@@ -236,16 +236,16 @@
             display: inline-block;
             margin-top: 10px;
             padding: 10px 18px;
-            border: 1px solid #38bdf8;
+            border: 1px solid #ff9900;
             border-radius: 6px;
-            color: #38bdf8;
+            color: #ff9900;
             text-decoration: none;
             transition: 0.3s;
         }
 
         .project-btn:hover {
-            background: #38bdf8;
-            color: #07111f;
+            background: #ff9900;
+            color: #060e1d;
         }
 
         /* CERTIFICATIONS */
@@ -257,8 +257,8 @@
         }
 
         .cert-card {
-            background: #111827;
-            border: 1px solid #1e293b;
+            background: #0a1730;
+            border: 1px solid #1e3a66;
             border-radius: 10px;
             padding: 20px;
             color: #cbd5e1;
@@ -267,7 +267,7 @@
 
         .cert-card:hover {
             transform: translateY(-3px);
-            border-color: #38bdf8;
+            border-color: #ff9900;
         }
 
         /* CONTACT */
@@ -289,17 +289,17 @@
         }
 
         .contact-links a {
-            color: #38bdf8;
+            color: #ff9900;
             text-decoration: none;
-            border: 1px solid #38bdf8;
+            border: 1px solid #ff9900;
             padding: 10px 22px;
             border-radius: 6px;
             transition: 0.3s;
         }
 
         .contact-links a:hover {
-            background: #38bdf8;
-            color: #07111f;
+            background: #ff9900;
+            color: #060e1d;
         }
 
         /* FOOTER */
@@ -307,7 +307,7 @@
         footer {
             text-align: center;
             padding: 25px;
-            border-top: 1px solid #1e293b;
+            border-top: 1px solid #1e3a66;
             color: #64748b;
             font-size: 14px;
         }
@@ -522,7 +522,7 @@
 
             <h2 class="section-title">Projects</h2>
 
-            <div class="project-card">
+            <div class="project-card" style="margin-bottom: 25px;">
 
                 <h3>
                     Cloud-Hosted Ticket Management System — AWS
@@ -547,6 +547,36 @@
                 </p>
 
                 <a href="https://github.com/aditi2002priya-hub"
+                   target="_blank"
+                   class="project-btn">
+                    GitHub Repository
+                </a>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>
+                    Personal Portfolio Website
+                </h3>
+
+                <p>
+                    Designed and built this personal portfolio website
+                    from scratch to showcase my skills, certifications,
+                    and cloud projects to recruiters and collaborators.
+                </p>
+
+                <p>
+                    Fully responsive layout with a custom navy and orange
+                    theme, built using plain HTML and CSS — no frameworks,
+                    deployed and hosted for free on GitHub Pages.
+                </p>
+
+                <p class="tech">
+                    HTML · CSS · GitHub Pages · Responsive Design
+                </p>
+
+                <a href="https://github.com/aditi2002priya-hub/aditi2002priya.github.io-"
                    target="_blank"
                    class="project-btn">
                     GitHub Repository
