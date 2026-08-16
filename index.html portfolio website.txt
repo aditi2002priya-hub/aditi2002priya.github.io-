@@ -613,7 +613,7 @@
                     IAM · CloudWatch · SNS
                 </p>
 
-                <a href="https://github.com/aditi2002priya-hub/Ticket-Management-System-AWS"
+                <a href="https://github.com/aditi2002priya-hub"
                    target="_blank"
                    class="project-btn">
                     GitHub Repository
