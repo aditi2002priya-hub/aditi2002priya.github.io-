@@ -50,7 +50,7 @@ aditi2002priya.github.io-/
 
 
 
-![Desktop View](screenshots/desktop-view.png)
+![Desktop View](desktop-view.png)
 
 
 
@@ -58,7 +58,7 @@ aditi2002priya.github.io-/
 
 
 
-![Mobile View](screenshots/mobile-view.jpg)
+![Mobile View](mobile-view.jpg)
 
 
 
