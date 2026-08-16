@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aditi Priya | Cloud Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11, 17, 32, 0.97);
+            border-bottom: 1px solid #1e293b;
+        }
+
+        nav {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #cbd5e1;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* GENERAL */
+
+        section {
+            max-width: 1150px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #ffffff;
+            font-size: 34px;
+            margin-bottom: 45px;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 55px;
+            height: 3px;
+            background: #38bdf8;
+            margin: 12px auto 0;
+        }
+
+        /* HOME */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .intro {
+            color: #38bdf8;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .hero h1 {
+            color: #ffffff;
+            font-size: 64px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            color: #cbd5e1;
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            color: #94a3b8;
+            font-size: 18px;
+            max-width: 720px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            background: #38bdf8;
+            color: #07111f;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #7dd3fc;
+        }
+
+        .btn.secondary {
+            background: transparent;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+        }
+
+        .btn.secondary:hover {
+            background: #38bdf8;
+            color: #07111f;
+        }
+
+        /* ABOUT */
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+        .about-content p {
+            margin-bottom: 18px;
+        }
+
+        /* SKILLS */
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: #e2e8f0;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        /* PROJECT */
+
+        .project-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 32px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .project-card h3 {
+            color: #ffffff;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+
+        .tech {
+            color: #38bdf8 !important;
+            font-size: 14px;
+        }
+
+        .project-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            border: 1px solid #38bdf8;
+            border-radius: 6px;
+            color: #38bdf8;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .project-btn:hover {
+            background: #38bdf8;
+            color: #07111f;
+        }
+
+        /* CERTIFICATIONS */
+
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .cert-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 10px;
+            padding: 20px;
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-3px);
+            border-color: #38bdf8;
+        }
+
+        /* CONTACT */
+
+        .contact-content {
+            text-align: center;
+        }
+
+        .contact-content p {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #38bdf8;
+            text-decoration: none;
+            border: 1px solid #38bdf8;
+            padding: 10px 22px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: #38bdf8;
+            color: #07111f;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .skills-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .certifications {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            section {
+                padding: 70px 18px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .skills-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .skill-card {
+                padding: 15px 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+        <nav>
+
+            <div class="logo">
+                Aditi<span>.</span>
+            </div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- HOME -->
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="intro">Hello, I'm</p>
+
+                <h1>Aditi Priya</h1>
+
+                <h2>Cloud Engineer</h2>
+
+                <p class="hero-description">
+                    Cloud Engineer with hands-on experience designing and
+                    deploying secure, highly available multi-tier architectures
+                    on AWS. Skilled in cloud networking, automated scaling,
+                    and Multi-AZ database deployment.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn">
+                        Explore My Work
+                    </a>
+
+                    <a href="Aditi_Priya_Resume.pdf"
+                       class="btn secondary"
+                       target="_blank">
+                        Download Resume
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section id="about">
+
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about-content">
+
+                <p>
+                    I am a BCA student specializing in Cloud & Cybersecurity
+                    with hands-on experience in AWS cloud infrastructure.
+                </p>
+
+                <p>
+                    I have experience designing and deploying secure,
+                    highly available multi-tier architectures using AWS
+                    services including VPC, EC2, ALB, Auto Scaling,
+                    RDS, IAM and CloudWatch.
+                </p>
+
+                <p>
+                    I am focused on building scalable, secure and
+                    cost-effective cloud solutions while developing
+                    my skills in cloud networking and cybersecurity.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILLS -->
+
+        <section id="skills">
+
+            <h2 class="section-title">Technical Skills</h2>
+
+            <div class="skills-container">
+
+                <div class="skill-card">AWS</div>
+                <div class="skill-card">VPC</div>
+                <div class="skill-card">EC2</div>
+                <div class="skill-card">ALB</div>
+
+                <div class="skill-card">Auto Scaling</div>
+                <div class="skill-card">RDS</div>
+                <div class="skill-card">IAM</div>
+                <div class="skill-card">CloudWatch</div>
+
+                <div class="skill-card">SNS</div>
+                <div class="skill-card">S3</div>
+                <div class="skill-card">Microsoft Azure</div>
+                <div class="skill-card">Google Cloud Platform</div>
+
+                <div class="skill-card">Ethical Hacking</div>
+                <div class="skill-card">Networking</div>
+                <div class="skill-card">Vulnerability Assessment</div>
+                <div class="skill-card">Python</div>
+
+                <div class="skill-card">HTML</div>
+                <div class="skill-card">CSS</div>
+                <div class="skill-card">C</div>
+                <div class="skill-card">Git & GitHub</div>
+
+                <div class="skill-card">Linux</div>
+                <div class="skill-card">MySQL</div>
+                <div class="skill-card">Docker</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+
+        <section id="projects">
+
+            <h2 class="section-title">Projects</h2>
+
+            <div class="project-card">
+
+                <h3>
+                    Cloud-Hosted Ticket Management System — AWS
+                </h3>
+
+                <p>
+                    Built and deployed a scalable ticket management system
+                    on AWS using EC2, Application Load Balancer,
+                    Auto Scaling and Multi-AZ RDS across a custom VPC
+                    with public and private subnets.
+                </p>
+
+                <p>
+                    Configured IAM, chained Security Groups, CloudWatch
+                    alarms and SNS notifications for monitoring and
+                    automated failover.
+                </p>
+
+                <p class="tech">
+                    AWS · VPC · EC2 · ALB · Auto Scaling · RDS ·
+                    IAM · CloudWatch · SNS
+                </p>
+
+                <a href="https://github.com/aditi2002priya-hub"
+                   target="_blank"
+                   class="project-btn">
+                    GitHub Repository
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CERTIFICATIONS -->
+
+        <section id="certifications">
+
+            <h2 class="section-title">Certifications</h2>
+
+            <div class="certifications">
+
+                <div class="cert-card">
+                    Microsoft Azure AZ-900
+                </div>
+
+                <div class="cert-card">
+                    NPTEL – Introduction to Internet of Things
+                    (IIT Kharagpur)
+                </div>
+
+                <div class="cert-card">
+                    NPTEL – Introduction to Cloud Computing
+                    (IIT Kharagpur)
+                </div>
+
+                <div class="cert-card">
+                    E&ICT Academy, IIT Kanpur – Linux Administration
+                </div>
+
+                <div class="cert-card">
+                    E&ICT Academy, IIT Kanpur – Advanced Cloud (Azure)
+                </div>
+
+                <div class="cert-card">
+                    CEH v13 – Certified Ethical Hacker
+                </div>
+
+                <div class="cert-card">
+                    CHFI v11 – Computer Hacking Forensic Investigator
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section id="contact">
+
+            <h2 class="section-title">Let's Connect</h2>
+
+            <div class="contact-content">
+
+                <p>
+                    Feel free to connect with me for professional
+                    opportunities and networking.
+                </p>
+
+                <div class="contact-links">
+
+                    <a href="https://github.com/aditi2002priya-hub"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/aditi-p-333167406"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="mailto:aditi2002priya@gmail.com">
+                        Email
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Aditi Priya. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
