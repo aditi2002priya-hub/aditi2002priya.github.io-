@@ -58,7 +58,7 @@ aditi2002priya.github.io-/
 
 
 
-![Mobile View](screenshots/mobile-view.png)
+![Mobile View](screenshots/mobile-view.jpg)
 
 
 
