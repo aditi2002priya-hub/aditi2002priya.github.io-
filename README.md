@@ -64,17 +64,20 @@ aditi2002priya.github.io-/
 
 ## 🚀 Installation & Setup
 
-*1. Clone the Repository*
+1. **Clone the Repository**
 
+```bash
 git clone https://github.com/aditi2002priya-hub/aditi2002priya.github.io-.git
-
-*2. Navigate to Project Folder*
-
+```
+2. **Navigate to Project Folder**
+```bash
 cd aditi2002priya.github.io-
+```
 
-*3. Run the Project*
-
+3. **Run the Project**
+```
 Open index.html directly in a web browser.
+```
 
 ## 🔮 Future Enhancements
 
