@@ -7,6 +7,7 @@
     <title>Aditi Priya | Cloud Engineer</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -38,6 +39,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
 
         .logo {
@@ -65,6 +67,41 @@
 
         nav ul li a:hover {
             color: #ff9900;
+        }
+
+        /* HAMBURGER BUTTON */
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 28px;
+            height: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background: #ff9900;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(8.5px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-8.5px) rotate(-45deg);
         }
 
         /* GENERAL */
@@ -317,14 +354,42 @@
         @media (max-width: 800px) {
 
             nav {
-                flex-direction: column;
-                gap: 15px;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .hamburger {
+                display: flex;
             }
 
             nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
+                position: fixed;
+                top: 68px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                background: #060e1d;
+                border-bottom: 1px solid #1e3a66;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.35s ease;
+            }
+
+            nav ul.active {
+                max-height: 400px;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 15px;
+                border-bottom: 1px solid #142848;
             }
 
             .hero {
@@ -420,6 +485,7 @@
         .social-icons a.github:hover svg {
             fill: #060e1d;
         }
+
     </style>
 </head>
 
@@ -434,7 +500,13 @@
                 Aditi<span>.</span>
             </div>
 
-            <ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -491,13 +563,20 @@
                         </svg>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/aditi-p-333167406" target="_blank" title="LinkedIn">
-                        <svg viewBox="0 0 24 24" fill="#ff9900" stroke="none">
+                    <a href="https://www.linkedin.com/in/aditi-p-333167406"
+                       target="_blank"
+                       title="LinkedIn">
+                        <svg viewBox="0 0 24 24"
+                             fill="#ff9900"
+                             stroke="none">
                             <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4zM8.5 8.5h3.8v2h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.66 1.8-2.66 3.65V23h-4z"/>
                         </svg>
                     </a>
 
-                    <a href="https://github.com/aditi2002priya-hub" target="_blank" class="github" title="GitHub">
+                    <a href="https://github.com/aditi2002priya-hub"
+                       target="_blank"
+                       class="github"
+                       title="GitHub">
                         <svg viewBox="0 0 24 24">
                             <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.15c-3.17.69-3.84-1.36-3.84-1.36-.52-1.3-1.27-1.65-1.27-1.65-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.53-.29-5.19-1.27-5.19-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.73.8 1.17 1.82 1.17 3.06 0 4.37-2.67 5.34-5.21 5.62.41.36.77 1.06.77 2.14v3.17c0 .3.21.66.79.55A10.53 10.53 0 0 0 23.5 12c0-6.28-5.23-11.5-11.5-11.5z"/>
                         </svg>
@@ -589,6 +668,9 @@
 
             <h2 class="section-title">Projects</h2>
 
+
+            <!-- PROJECT 1: TICKET MANAGEMENT SYSTEM -->
+
             <div class="project-card" style="margin-bottom: 25px;">
 
                 <h3>
@@ -621,6 +703,9 @@
 
             </div>
 
+
+            <!-- PROJECT 2: ATTACK PROOF WEB SERVER -->
+
             <div class="project-card" style="margin-bottom: 25px;">
 
                 <h3>
@@ -628,18 +713,19 @@
                 </h3>
 
                 <p>
-                    Deployed a hardened, highly available web server on AWS within
-                    a custom VPC, using an Application Load Balancer and Auto
-                    Scaling Group to maintain uptime and resilience against
-                    traffic spikes and instance failures.
+                    Deployed a hardened, highly available web server on AWS
+                    within a custom VPC, using an Application Load Balancer
+                    and Auto Scaling Group to maintain uptime and resilience
+                    against traffic spikes and instance failures.
                 </p>
 
                 <p>
-                    Secured server access using SSM Session Manager instead of
-                    direct SSH, and configured automated backups of OS data and
-                    application logs to an S3 bucket. Set up CloudWatch monitoring
-                    with SNS notifications for real-time alerting, and used
-                    Multi-AZ RDS for reliable, fault-tolerant data storage.
+                    Secured server access using SSM Session Manager instead
+                    of direct SSH, and configured automated backups of OS data
+                    and application logs to an S3 bucket. Set up CloudWatch
+                    monitoring with SNS notifications for real-time alerting,
+                    and used Multi-AZ RDS for reliable, fault-tolerant
+                    data storage.
                 </p>
 
                 <p class="tech">
@@ -654,6 +740,9 @@
                 </a>
 
             </div>
+
+
+            <!-- PROJECT 3: PERSONAL PORTFOLIO WEBSITE -->
 
             <div class="project-card">
 
@@ -735,30 +824,25 @@
 
         <section id="contact">
 
-            <h2 class="section-title">Let's Connect</h2>
+            <h2 class="section-title">Contact</h2>
 
             <div class="contact-content">
 
                 <p>
-                    Feel free to connect with me for professional
-                    opportunities and networking.
+                    I'm open to opportunities, collaborations and
+                    conversations around cloud and cybersecurity.
+                    Feel free to reach out.
                 </p>
 
                 <div class="contact-links">
 
-                    <a href="https://github.com/aditi2002priya-hub"
-                       target="_blank">
-                        GitHub
-                    </a>
+                    <a href="mailto:aditi2002priya@gmail.com">Email</a>
 
                     <a href="https://www.linkedin.com/in/aditi-p-333167406"
-                       target="_blank">
-                        LinkedIn
-                    </a>
+                       target="_blank">LinkedIn</a>
 
-                    <a href="mailto:aditi2002priya@gmail.com">
-                        Email
-                    </a>
+                    <a href="https://github.com/aditi2002priya-hub"
+                       target="_blank">GitHub</a>
 
                 </div>
 
@@ -772,12 +856,26 @@
     <!-- FOOTER -->
 
     <footer>
-
-        <p>
-            © 2026 Aditi Priya. All Rights Reserved.
-        </p>
-
+        © 2026 Aditi Priya. All rights reserved.
     </footer>
+
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
