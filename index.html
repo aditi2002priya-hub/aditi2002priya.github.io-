@@ -3,27 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Aditi Priya | Cloud Engineer</title>
-
     <style>
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
-
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #060e1d;
             color: #e5e7eb;
             line-height: 1.6;
         }
-
         /* NAVIGATION */
-
         header {
             position: sticky;
             top: 0;
@@ -31,7 +25,6 @@
             background: rgba(6, 14, 29, 0.97);
             border-bottom: 1px solid #1e3a66;
         }
-
         nav {
             max-width: 1150px;
             margin: auto;
@@ -41,36 +34,29 @@
             align-items: center;
             position: relative;
         }
-
         .logo {
             font-size: 25px;
             font-weight: bold;
             color: #ffffff;
         }
-
         .logo span {
             color: #ff9900;
         }
-
         nav ul {
             list-style: none;
             display: flex;
             gap: 25px;
         }
-
         nav ul li a {
             text-decoration: none;
             color: #cbd5e1;
             font-size: 15px;
             transition: 0.3s;
         }
-
         nav ul li a:hover {
             color: #ff9900;
         }
-
         /* HAMBURGER BUTTON */
-
         .hamburger {
             display: none;
             flex-direction: column;
@@ -82,7 +68,6 @@
             cursor: pointer;
             z-index: 1100;
         }
-
         .hamburger span {
             display: block;
             height: 3px;
@@ -91,34 +76,27 @@
             border-radius: 2px;
             transition: 0.3s;
         }
-
         .hamburger.active span:nth-child(1) {
             transform: translateY(8.5px) rotate(45deg);
         }
-
         .hamburger.active span:nth-child(2) {
             opacity: 0;
         }
-
         .hamburger.active span:nth-child(3) {
             transform: translateY(-8.5px) rotate(-45deg);
         }
-
         /* GENERAL */
-
         section {
             max-width: 1150px;
             margin: auto;
             padding: 90px 25px;
         }
-
         .section-title {
             text-align: center;
             color: #ffffff;
             font-size: 34px;
             margin-bottom: 45px;
         }
-
         .section-title::after {
             content: "";
             display: block;
@@ -127,52 +105,43 @@
             background: #ff9900;
             margin: 12px auto 0;
         }
-
         /* HOME */
-
         .hero {
             min-height: 90vh;
             display: flex;
             align-items: center;
         }
-
         .hero-content {
             max-width: 800px;
         }
-
         .intro {
             color: #ff9900;
             font-size: 18px;
             margin-bottom: 8px;
         }
-
         .hero h1 {
             color: #ffffff;
             font-size: 64px;
             line-height: 1.1;
             margin-bottom: 15px;
         }
-
         .hero h2 {
             color: #cbd5e1;
             font-size: 28px;
             font-weight: 500;
             margin-bottom: 20px;
         }
-
         .hero-description {
             color: #94a3b8;
             font-size: 18px;
             max-width: 720px;
             margin-bottom: 30px;
         }
-
         .buttons {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
         }
-
         .btn {
             display: inline-block;
             padding: 13px 24px;
@@ -183,25 +152,20 @@
             color: #060e1d;
             transition: 0.3s;
         }
-
         .btn:hover {
             transform: translateY(-3px);
             background: #ffb84d;
         }
-
         .btn.secondary {
             background: transparent;
             color: #ff9900;
             border: 1px solid #ff9900;
         }
-
         .btn.secondary:hover {
             background: #ff9900;
             color: #060e1d;
         }
-
         /* ABOUT */
-
         .about-content {
             max-width: 850px;
             margin: auto;
@@ -209,19 +173,15 @@
             color: #94a3b8;
             font-size: 17px;
         }
-
         .about-content p {
             margin-bottom: 18px;
         }
-
         /* SKILLS */
-
         .skills-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 18px;
         }
-
         .skill-card {
             background: #0a1730;
             border: 1px solid #1e3a66;
@@ -232,14 +192,11 @@
             font-weight: bold;
             transition: 0.3s;
         }
-
         .skill-card:hover {
             transform: translateY(-5px);
             border-color: #ff9900;
         }
-
         /* PROJECT */
-
         .project-card {
             background: #0a1730;
             border: 1px solid #1e3a66;
@@ -247,28 +204,23 @@
             padding: 32px;
             transition: 0.3s;
         }
-
         .project-card:hover {
             transform: translateY(-5px);
             border-color: #ff9900;
         }
-
         .project-card h3 {
             color: #ffffff;
             font-size: 23px;
             margin-bottom: 15px;
         }
-
         .project-card p {
             color: #94a3b8;
             margin-bottom: 15px;
         }
-
         .tech {
             color: #ff9900 !important;
             font-size: 14px;
         }
-
         .project-btn {
             display: inline-block;
             margin-top: 10px;
@@ -279,20 +231,16 @@
             text-decoration: none;
             transition: 0.3s;
         }
-
         .project-btn:hover {
             background: #ff9900;
             color: #060e1d;
         }
-
         /* CERTIFICATIONS */
-
         .certifications {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 18px;
         }
-
         .cert-card {
             background: #0a1730;
             border: 1px solid #1e3a66;
@@ -301,30 +249,24 @@
             color: #cbd5e1;
             transition: 0.3s;
         }
-
         .cert-card:hover {
             transform: translateY(-3px);
             border-color: #ff9900;
         }
-
         /* CONTACT */
-
         .contact-content {
             text-align: center;
         }
-
         .contact-content p {
             color: #94a3b8;
             margin-bottom: 30px;
         }
-
         .contact-links {
             display: flex;
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
         }
-
         .contact-links a {
             color: #ff9900;
             text-decoration: none;
@@ -333,14 +275,11 @@
             border-radius: 6px;
             transition: 0.3s;
         }
-
         .contact-links a:hover {
             background: #ff9900;
             color: #060e1d;
         }
-
         /* FOOTER */
-
         footer {
             text-align: center;
             padding: 25px;
@@ -348,21 +287,16 @@
             color: #64748b;
             font-size: 14px;
         }
-
         /* MOBILE */
-
         @media (max-width: 800px) {
-
             nav {
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
             }
-
             .hamburger {
                 display: flex;
             }
-
             nav ul {
                 position: fixed;
                 top: 68px;
@@ -376,78 +310,61 @@
                 overflow: hidden;
                 transition: max-height 0.35s ease;
             }
-
             nav ul.active {
                 max-height: 400px;
             }
-
             nav ul li {
                 width: 100%;
                 text-align: center;
             }
-
             nav ul li a {
                 display: block;
                 padding: 15px;
                 border-bottom: 1px solid #142848;
             }
-
             .hero {
                 min-height: 80vh;
             }
-
             .hero h1 {
                 font-size: 45px;
             }
-
             .hero h2 {
                 font-size: 22px;
             }
-
             .skills-container {
                 grid-template-columns: repeat(2, 1fr);
             }
-
             .certifications {
                 grid-template-columns: 1fr;
             }
         }
-
         @media (max-width: 500px) {
-
             section {
                 padding: 70px 18px;
             }
-
             .hero h1 {
                 font-size: 38px;
             }
-
             .hero h2 {
                 font-size: 20px;
             }
-
             .hero-description {
                 font-size: 16px;
             }
-
             .skills-container {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
             }
-
             .skill-card {
                 padding: 15px 8px;
                 font-size: 14px;
             }
         }
-
         .social-icons {
             display: flex;
             gap: 14px;
             margin-top: 25px;
         }
-
         .social-icons a {
             width: 44px;
             height: 44px;
@@ -459,53 +376,41 @@
             border-radius: 8px;
             transition: 0.3s;
         }
-
         .social-icons a:hover {
             border-color: #ff9900;
             background: #ff9900;
             transform: translateY(-3px);
         }
-
         .social-icons svg {
             width: 20px;
             height: 20px;
             stroke: #ff9900;
             fill: none;
         }
-
         .social-icons a:hover svg {
             stroke: #060e1d;
         }
-
         .social-icons a.github svg {
             fill: #ff9900;
             stroke: none;
         }
-
         .social-icons a.github:hover svg {
             fill: #060e1d;
         }
-
     </style>
 </head>
-
 <body>
-
     <!-- NAVIGATION -->
-
     <header>
         <nav>
-
             <div class="logo">
                 Aditi<span>.</span>
             </div>
-
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-
             <ul id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -514,55 +419,38 @@
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-
         </nav>
     </header>
-
-
     <main>
-
         <!-- HOME -->
-
         <section id="home" class="hero">
-
             <div class="hero-content">
-
                 <p class="intro">Hello, I'm</p>
-
                 <h1>Aditi Priya</h1>
-
                 <h2>Cloud Engineer</h2>
-
                 <p class="hero-description">
                     Cloud Engineer with hands-on experience designing and
                     deploying secure, highly available multi-tier architectures
                     on AWS. Skilled in cloud networking, automated scaling,
                     and Multi-AZ database deployment.
                 </p>
-
                 <div class="buttons">
-
                     <a href="#projects" class="btn">
                         Explore My Work
                     </a>
-
                     <a href="my-resume2026.pdf"
                        class="btn secondary"
                        target="_blank">
                         Download CV
                     </a>
-
                 </div>
-
                 <div class="social-icons">
-
                     <a href="mailto:aditi2002priya@gmail.com" title="Gmail">
                         <svg viewBox="0 0 24 24" stroke-width="1.8">
                             <path d="M4 4h16v16H4z"/>
                             <path d="M22 6l-10 7L2 6"/>
                         </svg>
                     </a>
-
                     <a href="https://www.linkedin.com/in/aditi-p-333167406"
                        target="_blank"
                        title="LinkedIn">
@@ -572,7 +460,6 @@
                             <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4zM8.5 8.5h3.8v2h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.66 1.8-2.66 3.65V23h-4z"/>
                         </svg>
                     </a>
-
                     <a href="https://github.com/aditi2002priya-hub"
                        target="_blank"
                        class="github"
@@ -581,144 +468,99 @@
                             <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.15c-3.17.69-3.84-1.36-3.84-1.36-.52-1.3-1.27-1.65-1.27-1.65-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.53-.29-5.19-1.27-5.19-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.73.8 1.17 1.82 1.17 3.06 0 4.37-2.67 5.34-5.21 5.62.41.36.77 1.06.77 2.14v3.17c0 .3.21.66.79.55A10.53 10.53 0 0 0 23.5 12c0-6.28-5.23-11.5-11.5-11.5z"/>
                         </svg>
                     </a>
-
                 </div>
-
             </div>
-
         </section>
-
-
         <!-- ABOUT -->
-
         <section id="about">
-
             <h2 class="section-title">About Me</h2>
-
             <div class="about-content">
-
                 <p>
                     I am a BCA student specializing in Cloud & Cybersecurity
                     with hands-on experience in AWS cloud infrastructure.
                 </p>
-
                 <p>
                     I have experience designing and deploying secure,
                     highly available multi-tier architectures using AWS
                     services including VPC, EC2, ALB, Auto Scaling,
                     RDS, IAM and CloudWatch.
                 </p>
-
                 <p>
                     I am focused on building scalable, secure and
                     cost-effective cloud solutions while developing
                     my skills in cloud networking and cybersecurity.
                 </p>
-
             </div>
-
         </section>
-
-
         <!-- SKILLS -->
-
         <section id="skills">
-
             <h2 class="section-title">Technical Skills</h2>
-
             <div class="skills-container">
-
                 <div class="skill-card">AWS</div>
                 <div class="skill-card">VPC</div>
                 <div class="skill-card">EC2</div>
                 <div class="skill-card">ALB</div>
-
                 <div class="skill-card">Auto Scaling</div>
                 <div class="skill-card">RDS</div>
                 <div class="skill-card">IAM</div>
                 <div class="skill-card">CloudWatch</div>
-
                 <div class="skill-card">SNS</div>
                 <div class="skill-card">S3</div>
                 <div class="skill-card">Microsoft Azure</div>
                 <div class="skill-card">Google Cloud Platform</div>
-
                 <div class="skill-card">Ethical Hacking</div>
                 <div class="skill-card">Networking</div>
                 <div class="skill-card">Vulnerability Assessment</div>
                 <div class="skill-card">Python</div>
-
                 <div class="skill-card">HTML</div>
                 <div class="skill-card">CSS</div>
                 <div class="skill-card">C</div>
                 <div class="skill-card">Git & GitHub</div>
-
                 <div class="skill-card">Linux</div>
                 <div class="skill-card">MySQL</div>
                 <div class="skill-card">Docker</div>
-
             </div>
-
         </section>
-
-
         <!-- PROJECTS -->
-
         <section id="projects">
-
             <h2 class="section-title">Projects</h2>
-
-
             <!-- PROJECT 1: TICKET MANAGEMENT SYSTEM -->
-
             <div class="project-card" style="margin-bottom: 25px;">
-
                 <h3>
                     Cloud-Hosted Ticket Management System — AWS
                 </h3>
-
                 <p>
                     Built and deployed a scalable ticket management system
                     on AWS using EC2, Application Load Balancer,
                     Auto Scaling and Multi-AZ RDS across a custom VPC
                     with public and private subnets.
                 </p>
-
                 <p>
                     Configured IAM, chained Security Groups, CloudWatch
                     alarms and SNS notifications for monitoring and
                     automated failover.
                 </p>
-
                 <p class="tech">
                     AWS · VPC · EC2 · ALB · Auto Scaling · RDS ·
                     IAM · CloudWatch · SNS
                 </p>
-
                 <a href="https://github.com/aditi2002priya-hub/Ticket-Management-System-AWS"
                    target="_blank"
                    class="project-btn">
                     GitHub Repository
                 </a>
-
             </div>
-
-
             <!-- PROJECT 2: ATTACK PROOF WEB SERVER -->
-
             <div class="project-card" style="margin-bottom: 25px;">
-
                 <h3>
                     Attack Proof Web Server with Automated Backups of OS & Logs
                 </h3>
-
                 <p>
                     Deployed a hardened, highly available web server on AWS
                     within a custom VPC, using an Application Load Balancer
                     and Auto Scaling Group to maintain uptime and resilience
                     against traffic spikes and instance failures.
                 </p>
-
                 <p>
                     Secured server access using SSM Session Manager instead
                     of direct SSH, and configured automated backups of OS data
@@ -727,148 +569,126 @@
                     and used Multi-AZ RDS for reliable, fault-tolerant
                     data storage.
                 </p>
-
                 <p class="tech">
                     AWS · VPC · EC2 · ALB · Auto Scaling · SSM · S3 ·
                     CloudWatch · RDS · SNS
                 </p>
-
                 <a href="https://github.com/aditi2002priya-hub/attack-proof-web-server"
                    target="_blank"
                    class="project-btn">
                     GitHub Repository
                 </a>
-
             </div>
-
-
-            <!-- PROJECT 3: PERSONAL PORTFOLIO WEBSITE -->
-
+            <!-- PROJECT 3: AWS E-COMMERCE CLOUD COST OPTIMIZATION & MONITORING -->
+            <div class="project-card" style="margin-bottom: 25px;">
+                <h3>
+                    AWS E-Commerce Cloud Cost Optimization & Monitoring Platform
+                </h3>
+                <p>
+                    Designed a cloud cost monitoring solution for a hypothetical
+                    e-commerce platform to track AWS spending, identify high-cost
+                    services, and improve overall cost visibility.
+                </p>
+                <p>
+                    Configured AWS Budgets with threshold-based alerts, CloudWatch
+                    EstimatedCharges monitoring, Cost Anomaly Detection, and SNS
+                    email notifications to detect unusual spending and support
+                    proactive cost management.
+                </p>
+                <p class="tech">
+                    AWS · AWS Budgets · CloudWatch · Cost Anomaly Detection ·
+                    SNS · Billing & Cost Management
+                </p>
+                <a href="https://github.com/aditi2002priya-hub/Cost-Optimization-System"
+                   target="_blank"
+                   class="project-btn">
+                    GitHub Repository
+                </a>
+            </div>
+            <!-- PROJECT 4: PERSONAL PORTFOLIO WEBSITE -->
             <div class="project-card">
-
                 <h3>
                     Personal Portfolio Website
                 </h3>
-
                 <p>
                     Designed and built this personal portfolio website
                     from scratch to showcase my skills, certifications,
                     and cloud projects to recruiters and collaborators.
                 </p>
-
                 <p>
                     Fully responsive layout with a custom navy and orange
                     theme, built using plain HTML and CSS — no frameworks,
                     deployed and hosted for free on GitHub Pages.
                 </p>
-
                 <p class="tech">
                     HTML · CSS · GitHub Pages · Responsive Design
                 </p>
-
                 <a href="https://github.com/aditi2002priya-hub/aditi2002priya.github.io-"
                    target="_blank"
                    class="project-btn">
                     GitHub Repository
                 </a>
-
             </div>
-
         </section>
-
-
         <!-- CERTIFICATIONS -->
-
         <section id="certifications">
-
             <h2 class="section-title">Certifications</h2>
-
             <div class="certifications">
-
                 <div class="cert-card">
                     Microsoft Azure AZ-900
                 </div>
-
                 <div class="cert-card">
                     NPTEL – Introduction to Internet of Things
                     (IIT Kharagpur)
                 </div>
-
                 <div class="cert-card">
                     NPTEL – Introduction to Cloud Computing
                     (IIT Kharagpur)
                 </div>
-
                 <div class="cert-card">
                     E&ICT Academy, IIT Kanpur – Linux Administration
                 </div>
-
                 <div class="cert-card">
                     E&ICT Academy, IIT Kanpur – Advanced Cloud (Azure)
                 </div>
-
                 <div class="cert-card">
                     CEH v13 – Certified Ethical Hacker
                 </div>
-
                 <div class="cert-card">
                     CHFI v11 – Computer Hacking Forensic Investigator
                 </div>
-
             </div>
-
         </section>
-
-
         <!-- CONTACT -->
-
         <section id="contact">
-
             <h2 class="section-title">Contact</h2>
-
             <div class="contact-content">
-
                 <p>
                     I'm open to opportunities, collaborations and
                     conversations around cloud and cybersecurity.
                     Feel free to reach out.
                 </p>
-
                 <div class="contact-links">
-
                     <a href="mailto:aditi2002priya@gmail.com">Email</a>
-
                     <a href="https://www.linkedin.com/in/aditi-p-333167406"
                        target="_blank">LinkedIn</a>
-
                     <a href="https://github.com/aditi2002priya-hub"
                        target="_blank">GitHub</a>
-
                 </div>
-
             </div>
-
         </section>
-
     </main>
-
-
     <!-- FOOTER -->
-
     <footer>
         © 2026 Aditi Priya. All rights reserved.
     </footer>
-
-
     <script>
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
-
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
-
         document.querySelectorAll('#navMenu a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -876,6 +696,5 @@
             });
         });
     </script>
-
 </body>
 </html>
